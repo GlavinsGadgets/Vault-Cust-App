@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-header>
+      <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Loyalty Card</ion-title>
+      </ion-navbar>
+    </ion-header>
+</ion-header>
+
+
+<ion-content class="cl-main">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <div text-center>
+              Scan the Barcode now to add points to your Loyalty card.
+            </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col col-10>
+          <button ion-button full icon-left (click)="scanCode()" color=""><ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
+          <ion-card *ngIf="scannedCode">
+            <ion-card-content class="result">
+              <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+              Result from Scan: {{ scannedCode }}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col></ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>Employee</ion-title>
+        </ion-navbar>
+      </ion-header>
+  </ion-header>
+
+
+<ion-content class="ep-main">
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+              <div text-center>
+                Scan the Barcode now to add points to your Loyalty card.
+              </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+  
+          <ion-col></ion-col>
+          <ion-col col-10>
+            <ion-item>
+              <ion-input type="text" placeholder="MY QR Code data" [(ngModel)]="qrData">
+            </ion-input>
+    
+            </ion-item>
+              <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
+              <button ion-button full icon-left (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan Code</button>
+            
+            <ion-card *ngIf="createdCode">
+              <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+              <ion-card-content>
+                <p>Value: {{ createdCode }}</p>
+              </ion-card-content>
+            </ion-card>
+            
+            <ion-card *ngIf="scannedCode">
+              <ion-card-content>
+                Result from Scan: {{ scannedCode }}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col></ion-col>
+  
+        </ion-row>
+      </ion-grid>
+</ion-content>

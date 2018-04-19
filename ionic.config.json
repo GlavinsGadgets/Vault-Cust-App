@@ -1,0 +1,8 @@
+{
+  "name": "Vault-Cust-App",
+  "app_id": "7e317f97",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

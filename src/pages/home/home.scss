@@ -1,0 +1,60 @@
+page-home {
+    .hp-main{
+        background-color: #1c1c1c;
+    }
+    .hp-main-vault-icon{
+        background-image: URL('../../Assets/imgs/Vault-Logo-850x500.png');
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .hp-main-vault-icon-holder{
+        padding: 90px 0;
+    }
+    .hp-main-color{
+        background-color: #ffea00;
+        box-shadow: 0px 10px 15px #000;
+    }
+    .hp-main-footer{
+        background-color: #000000;
+        box-shadow: 0px 2px 20px #000;
+        z-index: 1;
+    }
+    .hp-main-footer img{
+        margin: 1em auto;
+    }
+    .hp-main-second-pannel{
+        background-image: URL('../../Assets/imgs/hp-main-second-pannel.png');
+        background-size: 100%;
+        background-position: center left;
+        background-repeat: no-repeat;
+        color: #fff;
+        padding: 15px 0;
+        z-index: -1;
+    }
+    .hp-main-third-pannel, .hp-main-third-pannel h5{
+        background-color: #404042;
+        color:white;
+        font-weight: 600;
+        font-size: 120%;
+        padding-bottom: 10px;
+    }
+    .hp-main-third-pannel .left{
+        text-align: left;
+    }
+    .hp-main-third-pannel .right{
+        text-align: right;
+    }
+
+    .button-color{
+        background-color: #ffea00;
+        color: #000;
+    }
+    .button-color:hover{
+        background-color: #fff25e;
+    }
+    .img-loaded{
+        background: none;
+    }
+
+}
