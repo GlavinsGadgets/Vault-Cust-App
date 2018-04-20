@@ -16,10 +16,14 @@
 // automatically applied to the <body> element in the app.
 
 
-.content, .icon, .toolbar-title, .toolbar-background, .menu-list-br{
+.content, .icon, .toolbar-background, .menu-list-br{
     background-color: #232323;
     color: white;
 }
+.pagetitle .toolbar-title, .toolbar-content .toolbar-title{
+    color: white;
+}
+
 .img-loaded{
     background: none;
 }
