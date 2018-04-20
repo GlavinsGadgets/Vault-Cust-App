@@ -28,8 +28,8 @@
             </ion-input>
     
             </ion-item>
-              <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
-              <button ion-button full icon-left (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan Code</button>
+              <button ion-button full icon-left class="button-color" (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
+              <button ion-button full icon-left class="button-color" (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan Code</button>
             
             <ion-card *ngIf="createdCode">
               <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>

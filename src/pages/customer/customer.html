@@ -22,7 +22,7 @@
       <ion-row>
         <ion-col></ion-col>
         <ion-col col-10>
-          <button ion-button full icon-left (click)="scanCode()" color=""><ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
+          <button ion-button full icon-left class="button-color" (click)="scanCode()" color=""><ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
           <ion-card *ngIf="scannedCode">
             <ion-card-content class="result">
               <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>

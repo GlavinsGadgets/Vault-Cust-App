@@ -2,27 +2,28 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { OAuthService } from 'angular-oauth2-oidc';
 
 import { HomePage } from '../pages/home/home';
-import { CustomerPage } from '../pages/customer/customer';
-import { EmployeePage } from '../pages/employee/employee';
-import { ContactPage } from '../pages/contact/contact';
 import { HistoryPage } from '../pages/history/history';
 import { MediaPage } from '../pages/media/media';
+import { ContactPage } from '../pages/contact/contact';
+import { CustomerPage } from '../pages/customer/customer';
 import { LoginPage } from '../pages/login/login';
+
+import { EmployeePage } from '../pages/employee/employee';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = ContactPage;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public oauthService: OAuthService) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
 
     this.pages = [
       { title: 'Home', component: HomePage },
@@ -34,10 +35,12 @@ export class MyApp {
       { title: 'Emplyoee Create Barcode', component: EmployeePage },
     ];
 
-
-    
     this.initializeApp();
 
+  }
+
+  openPage(page) {
+    this.nav.setRoot(page.component);
   }
 
   initializeApp() {
@@ -47,7 +50,4 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
-    this.nav.setRoot(page.component);
-  }
 }

@@ -1,8 +1,33 @@
 page-contact {
 
-    .c-main{
-        background-color: #1c1c1c;
-        color: white;
+    .cp-main{
+        background-image: URL("../../assets/imgs/main-image-media.jpg");
+        background-size: 130%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        height: 270px;
+    }
+    .cp-main h2{
+        padding-top: 30px;
+        font-size: 2em;
+        font-weight: 700;
+        text-shadow: 0 1px 10px #000;
+    }
+    .cp-main h3{
+        padding-top: 25px;
+        font-size: 1.5em;
+        font-weight: 600;
+        text-shadow: 0 1px 10px #000;
+    }
+    .cp-main h4{
+        padding-top: 10px;
+        font-size: 1em;
+        text-shadow: 0 1px 5px #000;
     }
 
+    #map{
+        width: 100%;
+        height: 300px;
+    }
+    
 }

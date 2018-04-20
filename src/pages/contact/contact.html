@@ -7,6 +7,35 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="c-main">
+<ion-content>
+
+  <ion-grid class="cp-main">
+
+    <ion-row text-center>
+      <ion-col></ion-col>
+      <ion-col col-10>
+        <h2>Contact</h2>
+        <h3>Want to get in contact with us</h3>
+        <h4>Use the form below to get in contact or feel free to use the Facebook, Instagram or Twitter page.</h4>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid>
+
+    <ion-row text-center>
+      <ion-col></ion-col>
+      <ion-col col-10>
+        <ion-buttons end>
+          <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+        </ion-buttons>
+        <div #map id="map"></div>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>

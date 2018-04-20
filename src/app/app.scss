@@ -14,20 +14,33 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.toolbar-background{
+
+
+.content, .icon, .toolbar-title, .toolbar-background, .menu-list-br{
     background-color: #232323;
-}
-.toolbar-title{
     color: white;
 }
-.icon {
-    color: white;
+.img-loaded{
+    background: none;
 }
-.menu-background .scroll-content, .menu-background .menu-list-br{
-    color:white;
-    background-color: #232323;
+.menu-list-br.item .item-inner .input-wrapper{
+    margin: 12px 5px;
 }
 .item-md.item-block .item-inner{
-    border-bottom: 2px solid rgb(92, 92, 92);
-    padding: 12px 0;
+    border-bottom: 1px groove rgb(156, 156, 156);
+    padding-left: 20px;
+}
+.item-md{
+    padding: 0;
+    margin: 0;
+}
+.item-md.activated{
+    background-color: #505050;
+}
+.button-color{
+    background-color: #ffea00;
+    color: #000;
+}
+.button-color:hover{
+    background-color: #fff36e;
 }

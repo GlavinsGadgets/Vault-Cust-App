@@ -28,7 +28,6 @@ import { LoginPageModule } from '../pages/login/login.module';
     ContactPage,
     HistoryPage,
     MediaPage,
-    
   ],
   imports: [
     BrowserModule,
@@ -47,7 +46,6 @@ import { LoginPageModule } from '../pages/login/login.module';
     ContactPage,
     HistoryPage,
     MediaPage,
-    
   ],
   providers: [
     StatusBar,

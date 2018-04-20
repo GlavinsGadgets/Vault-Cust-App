@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -7,14 +7,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="hp-main">
+<ion-content>
 
-  <ion-row class="hp-main-vault-icon"><ion-row class="hp-main-vault-icon-holder"></ion-row></ion-row>
+  <ion-grid no-padding>
+    <ion-row class="hp-main-vault-icon">
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
 
   <ion-grid class="hp-main-color"> 
     <ion-row>
       <ion-col></ion-col>
-      <ion-col col-8>
+      <ion-col col-9>
         <div text-center>
           <h2>Welcome to the Vault Customer Loyalty App!</h2>
         </div>
@@ -24,7 +28,7 @@
 
     <ion-row>
       <ion-col></ion-col>
-      <ion-col col-10>
+      <ion-col col-11>
         <div text-center>
           <h5>The Vault is an indoor sports, arts and cultural events venue that promotes a healthy mind, body and soul, looking to open this year, The Vault is located in the heart of Galway City.</h5>
         </div>
@@ -32,30 +36,34 @@
       <ion-col></ion-col>
     </ion-row>
 
-    <ion-row class="hp-main-">
+    <ion-row>
       <ion-col></ion-col>      
-      <ion-col col-3>
-        <div text-center>
-          <img src="../../assets/imgs/Body_and_Mind.png">
-          <h4>Body & Mind</h4>
-          <p>Empower young people to make positive decisions about their health and wellbeing.</p>
-        </div>
-      </ion-col>
-      <ion-col col-3>
-        <div text-center>
-          <img src="../../assets/imgs/Liberare_Creativity.png">
-          <h4>Liberate Creativity</h4>
-          <p>Instil confidence through workshops and social events that liberate individual creativity.</p>
-        </div>
-      </ion-col>
-      <ion-col col-3>
-        <div text-center>
-          <img src="../../assets/imgs/Pride_Of_Place.png">
-          <h4>Pride of Place</h4>
-          <p>Nurture a culture of imagination in the community through collaboration and play.</p>
-        </div>
-      </ion-col>
-      <ion-col></ion-col>
+      <ion-col col-11>
+        <ion-row>
+          <ion-col>
+            <div text-center>
+              <img src="../../assets/imgs/Body_and_Mind.png">
+              <h4>Body & Mind</h4>
+              <p>Empower young people to make positive decisions about their health and wellbeing.</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div text-center>
+              <img src="../../assets/imgs/Liberare_Creativity.png">
+              <h4>Liberate Creativity</h4>
+              <p>Instil confidence through workshops and social events that liberate individual creativity.</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div text-center>
+              <img src="../../assets/imgs/Pride_Of_Place.png">
+              <h4>Pride of Place</h4>
+              <p>Nurture a culture of imagination in the community through collaboration and play.</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>      
+      <ion-col></ion-col>      
     </ion-row>
   </ion-grid>
 
@@ -67,13 +75,14 @@
         <h6>Click here to open the customer loyalty page</h6>
         <button ion-button class="button-color" (click)="OpenCustomerPage()">Open Loyalty Page</button>
       </ion-col>
+      <ion-col col-1 col-md-0></ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-grid class="hp-main-third-pannel">
     <ion-row>
       <ion-col></ion-col>
-      <ion-col col-9 class="left">
+      <ion-col col-9 text-left>
         <h5>Play</h5>
         <p>Skatepark, bouldering wall, creative spaces, and space for live events, workshops and competitions.</p>
       </ion-col>
@@ -81,7 +90,7 @@
     </ion-row>
     <ion-row>
       <ion-col></ion-col>
-      <ion-col col-9 class="right">
+      <ion-col col-9 text-right>
         <h5>Eat</h5>
         <p>All day café, juice bar using local produce to promote positive food choices.</p>
       </ion-col>
@@ -89,7 +98,7 @@
     </ion-row>
     <ion-row>
       <ion-col></ion-col>
-      <ion-col col-9 class="left">
+      <ion-col col-9 text-left>
         <h5>Shop</h5>
         <p>Street-wear, local artisan crafts and community markets that promote regional designers and makers.</p>
       </ion-col>
@@ -99,7 +108,13 @@
 
   <ion-grid class="hp-main-footer"> 
     <ion-row>
-      <img src="../../assets/imgs/The_Vault_Trans_Logo.png" />
+      <ion-col></ion-col>
+      <ion-col>
+        <div (click)="openWebpage('https://thevault.ie/')">
+          <img src="../../assets/imgs/The_Vault_Trans_Logo.png" />
+        </div>
+      </ion-col>
+      <ion-col></ion-col>
     </ion-row>  
     <ion-row>
       <ion-col>

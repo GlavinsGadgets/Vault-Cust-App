@@ -1,3 +1,42 @@
 page-media {
 
+    .mp-main{
+        background-image: URL("../../assets/imgs/main-image-media.jpg");
+        background-size: 130%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        height: 270px;
+    }
+    .mp-main h2{
+        padding-top: 30px;
+        font-size: 2em;
+        font-weight: 700;
+        text-shadow: 0 1px 10px #000;
+    }    
+    .mp-main h3{
+        padding-top: 25px;
+        font-size: 1.5em;
+        font-weight: 600;
+        text-shadow: 0 1px 10px #000;
+    }
+    .mp-main h4{
+        padding-top: 10px;
+        font-size: 1em;
+        text-shadow: 0 1px 5px #000;
+    }
+
+    .mp-main-content{
+        background-color: #ffea00;
+        box-shadow: 0px 2px 5px #000;
+        color:#000;
+    }
+    .mp-main-content h3{
+        font-size: 1.8em;
+        font-weight: 700;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #000;
+    }
+    .mp-main-content img{
+        box-shadow: 0 0 5px rgb(83, 83, 83);
+    }
 }
