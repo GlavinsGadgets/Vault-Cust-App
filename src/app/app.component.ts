@@ -19,7 +19,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ContactPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -31,7 +31,7 @@ export class MyApp {
       { title: 'Media', component: MediaPage },
       { title: 'Contact', component: ContactPage },
       { title: 'Loyalty Scheme', component: CustomerPage },
-      { title: 'Login', component: LoginPage },
+      { title: 'Customer Login', component: LoginPage },
       { title: 'Emplyoee Create Barcode', component: EmployeePage },
     ];
 

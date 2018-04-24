@@ -1,53 +1,66 @@
 <ion-header>
-  <ion-header>
-      <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>Loyalty Card</ion-title>
-      </ion-navbar>
-    </ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pagetitle">Loyalty Card</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
-<ion-content class="cl-main">
-    <ion-grid>
+<ion-content>
 
-        
-              
-      <ion-row>
-        <ion-col>
-            <div text-center>
-              Scan the Barcode now to add points to your Loyalty card.
-            </div>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col></ion-col>
+  <ion-grid class="cl-main">
+
+    <ion-row text-center>
+      <ion-col></ion-col>
+      <ion-col col-10>
+        <h2>Vault Loyalty Scheme</h2>
+        <h3>Sign up </h3>
+        <h4>We believe that a space with a positive and diverse culture fuels the imagination and liberates creativity.</h4>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid class="cl-content">
+     
+    <ion-row >
+      <ion-col>
+          <div text-center>
+            <p>Scan the Barcode now to add points to your Loyalty card.</p>
+          </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col col-10>
+        <button ion-button full icon-left class="button-color" (click)="scanCode()" color=""><ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
+        <ion-card *ngIf="scannedCode">
+          <ion-card-content class="result">
+            <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+            Result from Scan: {{ scannedCode }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
         <ion-col col-10>
-          <button ion-button full icon-left class="button-color" (click)="scanCode()" color=""><ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
-          <ion-card *ngIf="scannedCode">
-            <ion-card-content class="result">
-              <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
-              Result from Scan: {{ scannedCode }}
-            </ion-card-content>
-          </ion-card>
+          <ion-list *ngFor="let c of customer">
+            <ion-item text-center>
+              <h2>{{ c.CustomerName }}</h2>
+              <p>{{ c.CustomerLoyaltyPoints }}</p>
+            </ion-item>
+          </ion-list>
         </ion-col>
-        <ion-col></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
 
-      </ion-row>
-
-      <ion-row>
-          <ion-col>
-                 <ion-list *ngFor="let c of customer">
-                   <ion-item text-center>
-                     <h2>{{ c.CustomerName }}</h2>
-                     <p>{{ c.CustomerLoyaltyPoints }}</p>
-                   </ion-item>
-                 </ion-list>
-          </ion-col>
-        </ion-row>
-
-    </ion-grid>
+  </ion-grid>
 
 </ion-content>
