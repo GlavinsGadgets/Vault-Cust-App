@@ -16,8 +16,9 @@ export class CustomerPage {
   scannedCode = null;
 
   customer: string[];
-  cusloyaltypoints: string;
-  setcusloyaltypoints: string;
+  cusloyaltypoints: number;
+  scannedpoints: number;
+  setcusloyaltypoints: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public http: HttpClient, private cp: CustBalProvider) { }
 
@@ -30,7 +31,8 @@ export class CustomerPage {
   scanCode() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
-      this.setcusloyaltypoints = this.cusloyaltypoints + barcodeData.text;
+      this.scannedpoints = this.scannedCode;
+      this.setcusloyaltypoints = this.cusloyaltypoints + this.scannedpoints;
     }, (err) => {
       console.log('Error: ', err);
     });
