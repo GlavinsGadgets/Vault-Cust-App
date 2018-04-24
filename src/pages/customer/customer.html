@@ -39,13 +39,12 @@
 
       <ion-row>
           <ion-col>
-              <div text-center>
                  <ion-list *ngFor="let c of customer">
-                   <ion-item>
-                     <h2>{{Customer Name}}</h2>
+                   <ion-item text-center>
+                     <h2>{{ c.CustomerName }}</h2>
+                     <p>{{ c.CustomerLoyaltyPoints }}</p>
                    </ion-item>
                  </ion-list>
-              </div>
           </ion-col>
         </ion-row>
 

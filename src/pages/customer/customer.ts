@@ -15,21 +15,13 @@ export class CustomerPage {
   createdCode = null;
   scannedCode = null;
 
-  CID:string;
-  CLName:string;
-  CLUserName:string;
-  CLPassword:string;
-  CLPPoints:string;
+  customer: string[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public http: HttpClient, private cp: CustBalProvider) {  }
  
   ionViewDidLoad(){
     this.cp.getCustomerData().subscribe(data => {
-      this.CID = data.C_ID;
-      this.CLName = data.CL_Name;
-      this.CLUserName = data.CL_UserName;
-      this.CLPassword = data.CL_Password;
-      this.CLPPoints = data.CLP_Points;
+      this.customer = data.customer
     });
   }
   
