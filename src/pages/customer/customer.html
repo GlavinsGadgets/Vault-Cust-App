@@ -12,6 +12,9 @@
 
 <ion-content class="cl-main">
     <ion-grid>
+
+        
+              
       <ion-row>
         <ion-col>
             <div text-center>
@@ -33,6 +36,19 @@
         <ion-col></ion-col>
 
       </ion-row>
+
+      <ion-row>
+          <ion-col>
+              <div text-center>
+                 <ion-list *ngFor="let c of customer">
+                   <ion-item>
+                     <h2>{{Customer Name}}</h2>
+                   </ion-item>
+                 </ion-list>
+              </div>
+          </ion-col>
+        </ion-row>
+
     </ion-grid>
 
 </ion-content>

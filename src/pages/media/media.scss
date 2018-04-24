@@ -30,13 +30,33 @@ page-media {
         box-shadow: 0px 2px 5px #000;
         color:#000;
     }
-    .mp-main-content h3{
+    .mp-main-content .top h3{
         font-size: 1.8em;
         font-weight: 700;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         border-bottom: 1px solid #000;
     }
     .mp-main-content img{
         box-shadow: 0 0 5px rgb(83, 83, 83);
+    }
+    .media-iframe{
+        position: relative;
+        padding-bottom: 52%; /* 16:9 */
+        height: 0;
+    }
+    .media-iframe iframe{
+        width: 90%;
+        height: 420px;
+    }
+    .media-fb-post-frame{
+        display: block;
+
+    }
+    .media-fb-post-frame iframe{
+        display: inline-flex;
+        width: 100%;
+        height: 460px;
+        border:none;
+        overflow:hidden
     }
 }

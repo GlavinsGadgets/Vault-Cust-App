@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, Nav, NavController, NavParams } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { OAuthService } from 'angular-oauth2-oidc';
-import { LoginPage } from '../login/login';
+import { HttpClient } from '@angular/common/http';
+import { CustBalProvider } from '../../providers/cust-bal/cust-bal';
 
 @IonicPage()
 @Component({
@@ -15,15 +15,23 @@ export class CustomerPage {
   createdCode = null;
   scannedCode = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, private oauthService: OAuthService) { 
-    if (oauthService.hasValidIdToken()) {
-      this.nav.push(CustomerPage);
-    } else {
-      this.nav.push(LoginPage);
-    }
-    
-   }
+  CID:string;
+  CLName:string;
+  CLUserName:string;
+  CLPassword:string;
+  CLPPoints:string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public http: HttpClient, private cp: CustBalProvider) {  }
  
+  ionViewDidLoad(){
+    this.cp.getCustomerData().subscribe(data => {
+      this.CID = data.C_ID;
+      this.CLName = data.CL_Name;
+      this.CLUserName = data.CL_UserName;
+      this.CLPassword = data.CL_Password;
+      this.CLPPoints = data.CLP_Points;
+    });
+  }
   
   createCode() {
     this.createdCode = this.qrData;
@@ -38,8 +46,6 @@ export class CustomerPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CustomerPage');
-  }
+
 
 }

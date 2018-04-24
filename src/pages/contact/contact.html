@@ -23,16 +23,41 @@
 
   </ion-grid>
 
-  <ion-grid>
+  <ion-grid class="cp-contact-form">
 
     <ion-row text-center>
       <ion-col></ion-col>
-      <ion-col col-10>
-        <ion-buttons end>
-          <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
-        </ion-buttons>
-        <div #map id="map"></div>
-      </ion-col>
+        <ion-col col-10>
+          <h3>Contact Form</h3>
+          <form>
+            
+          </form>
+        </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row text-center>
+      <ion-col></ion-col>
+        <ion-col col-10>
+          <h3>Location</h3>
+        </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+
+    <ion-row text-center>
+      <ion-col></ion-col>
+        <ion-col col-10>
+          <h3>Location</h3>
+        </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row text-center>
+      <ion-col></ion-col>
+        <ion-col col-10>
+          <div #map id="map"></div>
+        </ion-col>
       <ion-col></ion-col>
     </ion-row>
 

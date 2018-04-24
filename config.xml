@@ -61,4 +61,5 @@
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
     <plugin name="phonegap-plugin-barcodescanner" spec="^7.1.1" />
     <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
+    <preference name="YouTubeDataApiKey" value="AIzaSyBKq9GfRRlX4fwMBxkYSXqOlZ636eeyzYU" />
 </widget>

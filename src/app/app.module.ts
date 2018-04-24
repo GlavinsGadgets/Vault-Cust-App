@@ -18,6 +18,11 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { LoginPageModule } from '../pages/login/login.module';
+import { Geolocation } from '@ionic-native/geolocation';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { Observable } from 'rxjs';
+import { CustBalProvider } from '../providers/cust-bal/cust-bal';
+
 
 @NgModule({
   declarations: [
@@ -50,10 +55,13 @@ import { LoginPageModule } from '../pages/login/login.module';
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpClientModule,
     BarcodeScanner,
     InAppBrowser,
+    YoutubeVideoPlayer,
+    CustBalProvider,
   ]
 })
 export class AppModule {}
