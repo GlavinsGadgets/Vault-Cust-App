@@ -36,6 +36,7 @@
     "cordova-android": "7.1.0",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-inappbrowser": "^3.0.0",
+    "cordova-plugin-ionic": "^4.1.6",
     "cordova-plugin-x-toast": "^2.6.2",
     "cordova-plugin-youtube-video-player": "^1.0.6",
     "cordova-sqlite-storage": "^2.3.1",

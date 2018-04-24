@@ -25,23 +25,25 @@
   </ion-grid>
 
   <ion-grid class="cl-content">
-     
-    <ion-row >
+
+    <ion-row>
       <ion-col>
-          <div text-center>
-            <p>Scan the Barcode now to add points to your Loyalty card.</p>
-          </div>
+        <div text-center>
+          <p>Scan the Barcode now to add points to your Loyalty card.</p>
+        </div>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col></ion-col>
       <ion-col col-10>
-        <button ion-button full icon-left class="button-color" (click)="scanCode()" color=""><ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
+        <button ion-button full icon-left class="button-color" (click)="scanCode()" color="">
+          <ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
         <ion-card *ngIf="scannedCode">
           <ion-card-content class="result">
             <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
             Result from Scan: {{ scannedCode }}
+            Updated Points: {{ setcusloyaltypoints }}
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -50,14 +52,14 @@
 
     <ion-row>
       <ion-col></ion-col>
-        <ion-col col-10>
-          <ion-list *ngFor="let c of customer">
-            <ion-item text-center>
-              <h2>{{ c.CustomerName }}</h2>
-              <p>{{ c.CustomerLoyaltyPoints }}</p>
-            </ion-item>
-          </ion-list>
-        </ion-col>
+      <ion-col col-10>
+        <ion-list *ngFor="let c of customer">
+          <ion-item text-center>
+            <h2>{{ c.CustomerName }}</h2>
+            <p>{{ c.CustomerLoyaltyPoints }}</p>
+          </ion-item>
+        </ion-list>
+      </ion-col>
       <ion-col></ion-col>
     </ion-row>
 

@@ -11,24 +11,23 @@ import { CustBalProvider } from '../../providers/cust-bal/cust-bal';
 })
 export class CustomerPage {
   @ViewChild(Nav) nav: Nav;
+
   qrData = null;
-  createdCode = null;
   scannedCode = null;
 
   customer: string[];
-
+  cusloyaltypoints: string;
+  setcusloyaltypoints: string;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public http: HttpClient, private cp: CustBalProvider) {  }
  
-  ionViewDidLoad(){
+  ionViewDidLoad() {
     this.cp.getCustomerData().subscribe(data => {
       this.customer = data.customer
-    });
+    }
+    );
   }
-  
-  createCode() {
-    this.createdCode = this.qrData;
-  }
- 
+
   scanCode() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;

@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+/* Pages */
 import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
 import { MediaPage } from '../pages/media/media';
@@ -10,6 +11,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { CustomerPage } from '../pages/customer/customer';
 import { LoginPage } from '../pages/login/login';
 
+/* Employee Create Barcode Page */
 import { EmployeePage } from '../pages/employee/employee';
 
 @Component({
