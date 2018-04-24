@@ -18,12 +18,14 @@ export class CustomerPage {
   customer: string[];
   cusloyaltypoints: string;
   setcusloyaltypoints: string;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public http: HttpClient, private cp: CustBalProvider) {  }
- 
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public http: HttpClient, private cp: CustBalProvider) { }
+
   ionViewDidLoad() {
     this.cp.getCustomerData().subscribe(data => {
       this.customer = data.customer
+      this.setcusloyaltypoints = data.CustomerLoyaltyPoints;
+
     }
     );
   }
@@ -31,9 +33,8 @@ export class CustomerPage {
   scanCode() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
-
     }, (err) => {
-        console.log('Error: ', err);
+      console.log('Error: ', err);
     });
   }
 
