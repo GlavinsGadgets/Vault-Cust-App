@@ -27,38 +27,43 @@
   <ion-grid class="cl-content">
 
     <ion-row>
-      <ion-col>
-        <div text-center>
-          <p>Scan the Barcode now to add points to your Loyalty card.</p>
-        </div>
+      <ion-col></ion-col>
+      <ion-col col-10 text-center>
+        <h3>Customer Details</h3>
       </ion-col>
+      <ion-col></ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col></ion-col>
       <ion-col col-10>
-        <button ion-button full icon-left class="button-color" (click)="scanCode()" color="">
-          <ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
-        <ion-card *ngIf="scannedCode">
-          <ion-card-content class="result">
-            <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
-            Result from Scan: {{ scannedCode }}
-            Updated Points: {{ setcusloyaltypoints }}
+        <ion-card *ngFor="let c of customer">
+          <ion-card-content text-center class="cusdetails">
+            <p>{{ c.CustomerName }}'s Current Balance</p>
+            <p>Current Loyalty Points: {{ c.CustomerLoyaltyPoints }}</p>
           </ion-card-content>
         </ion-card>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
 
+
+
     <ion-row>
       <ion-col></ion-col>
       <ion-col col-10>
-        <ion-list *ngFor="let c of customer">
-          <ion-item text-center>
-            <h2>{{ c.CustomerName }}</h2>
-            <p>{{ c.CustomerLoyaltyPoints }}</p>
-          </ion-item>
-        </ion-list>
+        <div text-center>
+          <p>Click bellow now to add points to your Loyalty card.</p>
+        </div>
+        <button ion-button full icon-left class="button-color" (click)="scanCode()" color="">
+          <ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>
+        <ion-card *ngIf="scannedCode">
+          <ion-card-content class="result">
+            <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+            <p>Recieved Points: {{ scannedCode }}</p>
+            <p>Updated Points: {{ setcusloyaltypoints }}</p>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>

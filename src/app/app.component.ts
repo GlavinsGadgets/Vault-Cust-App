@@ -9,7 +9,6 @@ import { HistoryPage } from '../pages/history/history';
 import { MediaPage } from '../pages/media/media';
 import { ContactPage } from '../pages/contact/contact';
 import { CustomerPage } from '../pages/customer/customer';
-import { LoginPage } from '../pages/login/login';
 
 /* Employee Create Barcode Page */
 import { EmployeePage } from '../pages/employee/employee';
@@ -21,7 +20,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = CustomerPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -33,7 +32,6 @@ export class MyApp {
       { title: 'Media', component: MediaPage },
       { title: 'Contact', component: ContactPage },
       { title: 'Loyalty Scheme', component: CustomerPage },
-      { title: 'Customer Login', component: LoginPage },
       { title: 'Emplyoee Create Barcode', component: EmployeePage },
     ];
 

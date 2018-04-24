@@ -15,7 +15,6 @@ import { MediaPage } from '../pages/media/media';
 import { CustBalProvider } from '../providers/cust-bal/cust-bal';
 
 /* Moudles */
-import { LoginPageModule } from '../pages/login/login.module';
 
 /* Ionic/Cordova/Angular Intergration */
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,8 +23,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClientModule } from '@angular/common/http';
-import { OAuthModule } from 'angular-oauth2-oidc';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -39,9 +38,8 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
   ],
   imports: [
     BrowserModule,
-    LoginPageModule,
     IonicModule.forRoot(MyApp),
-    OAuthModule.forRoot(),
+    IonicStorageModule.forRoot(),
     HttpClientModule,
     NgxQRCodeModule,
   ],
