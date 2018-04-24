@@ -12,13 +12,13 @@ import { CustBalProvider } from '../../providers/cust-bal/cust-bal';
 export class CustomerPage {
   @ViewChild(Nav) nav: Nav;
 
-  qrData = null;
-  scannedCode = null;
+  qrData;
+  scannedCode;
 
   customer: string[];
   cusloyaltypoints: number;
   scannedpoints: number;
-  setcusloyaltypoints: any;
+  setcusloyaltypoints: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, public http: HttpClient, private cp: CustBalProvider) { }
 
