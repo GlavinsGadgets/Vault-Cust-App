@@ -23,16 +23,14 @@ export class CustomerPage {
 
   ionViewDidLoad() {
     this.cp.getCustomerData().subscribe(data => {
-      this.customer = data.customer
-      this.setcusloyaltypoints = data.CustomerLoyaltyPoints;
-
-    }
-    );
-  }
+      this.customer = data.customer;
+      this.cusloyaltypoints = data.customer[0].CustomerLoyaltyPoints;
+    });}
 
   scanCode() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
+      this.setcusloyaltypoints = this.cusloyaltypoints + barcodeData.text;
     }, (err) => {
       console.log('Error: ', err);
     });
