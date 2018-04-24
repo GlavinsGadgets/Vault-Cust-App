@@ -32,7 +32,7 @@ export class CustomerPage {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
       this.scannedpoints = this.scannedCode;
-      this.setcusloyaltypoints = this.cusloyaltypoints + this.scannedpoints;
+      this.setcusloyaltypoints = +this.cusloyaltypoints + +this.scannedpoints;
     }, (err) => {
       console.log('Error: ', err);
     });
