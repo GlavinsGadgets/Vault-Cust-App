@@ -22,7 +22,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
 
@@ -40,7 +40,7 @@ export class MyApp {
   }
 
   openPage(page) {
-    this.nav.setRoot(page.component, {}, {animate: true, duration: 200});
+    this.nav.setRoot(page.component, {}, { animate: true, duration: 120 });
   }
 
   initializeApp() {
