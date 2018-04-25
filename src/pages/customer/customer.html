@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="pagetitle">Loyalty Card</ion-title>
+    <ion-title class="pagetitle">Wallet</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,8 +14,8 @@
 
     <ion-row text-center>
       <ion-col></ion-col>
-      <ion-col col-10>
-        <h2>Vault Loyalty Scheme</h2>
+      <ion-col col-9>
+        <h2>Your Wallet</h2>
         <h3>Build up points and earn your self a free coffee!</h3>
       </ion-col>
       <ion-col></ion-col>
@@ -28,8 +28,8 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col col-10 text-center>
-        <h3>Come here often?</h3>
-        <h4>Make sure to sign up in store to be able to get points.</h4>
+        <h4>Visit Often?</h4>
+        <h3>Make sure to sign up in store, to start adding points to your wallet.</h3>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
@@ -37,11 +37,10 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col col-10 text-center>
-        <h3>Customer Details</h3>
+        <h4>Customer Details</h4>
         <ion-card *ngFor="let c of customer">
           <ion-card-content text-center class="cusdetails">
-            <p>{{ c.CustomerName }}'s Current Balance</p>
-            <p>Current Loyalty Points: {{ c.CustomerLoyaltyPoints }}</p>
+            <p>{{ c.CustomerName }}'s Loyalty Points: {{ c.CustomerLoyaltyPoints }}</p>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -50,9 +49,9 @@
 
     <ion-row>
       <ion-col></ion-col>
-      <ion-col col-10>
+      <ion-col col-8>
         <div text-center>
-          <p>Click bellow now to add points to your Loyalty card.</p>
+          <h4>Click below to add points to your Wallet.</h4>
         </div>
         <button ion-button full icon-left class="button-color" (click)="scanCode()" color="">
           <ion-icon name="qr-scanner"></ion-icon>Scan Barcode Now</button>

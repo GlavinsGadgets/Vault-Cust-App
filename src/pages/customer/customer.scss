@@ -1,7 +1,7 @@
 page-customer {
 
     .cl-main{
-        background-image: URL("../../assets/imgs/main-image-custome-page.jpg");
+        background-image: url("../assets/imgs/main-image-custome-page.jpg");
         background-size: 130%;
         background-position: center bottom;
         background-repeat: no-repeat;
@@ -39,5 +39,11 @@ page-customer {
     .cl-content .cusdetails p{
         font-weight: 500;
     }
-
+    .button-color{
+        background-color: rgb(255, 252, 240);
+        color: #000;
+    }
+    .button-color:hover{
+        background-color: rgb(228, 222, 199);
+    }
 }

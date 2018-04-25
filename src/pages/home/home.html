@@ -42,21 +42,21 @@
         <ion-row>
           <ion-col>
             <div text-center>
-              <img src="../../assets/imgs/Body_and_Mind.png">
+              <img src="./assets/imgs/Body_and_Mind.png">
               <h4>Body & Mind</h4>
               <p>Empower young people to make positive decisions about their health and wellbeing.</p>
             </div>
           </ion-col>
           <ion-col>
             <div text-center>
-              <img src="../../assets/imgs/Liberare_Creativity.png">
+              <img src="./assets/imgs/Liberare_Creativity.png">
               <h4>Liberate Creativity</h4>
               <p>Instil confidence through workshops and social events that liberate individual creativity.</p>
             </div>
           </ion-col>
           <ion-col>
             <div text-center>
-              <img src="../../assets/imgs/Pride_Of_Place.png">
+              <img src="./assets/imgs/Pride_Of_Place.png">
               <h4>Pride of Place</h4>
               <p>Nurture a culture of imagination in the community through collaboration and play.</p>
             </div>
@@ -116,13 +116,20 @@
   <ion-grid class="hp-main-footer"> 
     <ion-row>
       <ion-col></ion-col>
-      <ion-col>
-        <div (click)="openWebpage('https://thevault.ie/')">
-          <img src="../../assets/imgs/The_Vault_Trans_Logo.png" />
+      <ion-col col-9 text-center>
+        <h6>Check out our other social links</h6>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col col-6>
+        <div ion-button full block class="button-color" (click)="openWebpage('https://thevault.ie/')">
+          <img src="./assets/imgs/The_Vault_Trans_Logo.png" height="75%"/>
         </div>
       </ion-col>
       <ion-col></ion-col>
-    </ion-row>  
+    </ion-row>
     <ion-row>
       <ion-col>
         <button ion-button block class="button-color" (click)="openWebpage('https://www.facebook.com/vaultgalway/')">Facebook</button>

@@ -29,10 +29,10 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'History of The Vault', component: HistoryPage },
-      { title: 'Media', component: MediaPage },
+      { title: 'The Vault\'s Media', component: MediaPage },
       { title: 'Contact', component: ContactPage },
-      { title: 'Loyalty Scheme', component: CustomerPage },
-      { title: 'Emplyoee Create Barcode', component: EmployeePage },
+      { title: 'Wallet', component: CustomerPage },
+      { title: 'Emplyoee', component: EmployeePage },
     ];
 
     this.initializeApp();

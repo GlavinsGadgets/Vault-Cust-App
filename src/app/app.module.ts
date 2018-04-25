@@ -24,7 +24,6 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -39,7 +38,6 @@ import { IonicStorageModule } from '@ionic/storage';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot(),
     HttpClientModule,
     NgxQRCodeModule,
   ],

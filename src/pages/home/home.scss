@@ -3,7 +3,7 @@ page-home {
     .hp-main-vault-icon{
         z-index: -1;
         height: 220px;
-        background-image: URL('../../assets/imgs/Vault-Logo-850x500.png');
+        background-image: URL('../assets/imgs/main-image-homepage-vault-logo.jpg');
         background-size: 100%;
         background-position: center center;
         background-repeat: no-repeat;
@@ -19,7 +19,7 @@ page-home {
     .hp-main-second-pannel{
         z-index: -1;
         padding: 12px 0;
-        background-image: URL('../../assets/imgs/hp-main-second-pannel.png');
+        background-image: url('../assets/imgs/hp-main-second-pannel.png');
         background-size: 100%;
         background-position: center left;
         background-repeat: no-repeat;
@@ -28,8 +28,8 @@ page-home {
 
     .hp-main-third-pannel, .hp-main-third-pannel h5{
         padding-bottom: 5px;
-        background-color: #404042;
-        color:white;
+        background-color: rgb(255, 252, 240);
+        color:rgb(54, 54, 54);
         font-size: 120%;
         font-weight: 600;
     }

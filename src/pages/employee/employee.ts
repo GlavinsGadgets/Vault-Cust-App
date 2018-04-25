@@ -10,26 +10,12 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class EmployeePage {
 
   qrData = null;
-  createdCode = null;
-  scannedCode = null;
+  empcreatedCode = null;
 
-  constructor(private barcodeScanner: BarcodeScanner) {
-  }
+  constructor(private barcodeScanner: BarcodeScanner) { }
 
   createCode() {
-    this.createdCode = this.qrData;
-  }
-
-  scanCode() {
-    this.barcodeScanner.scan().then(barcodeData => {
-      this.scannedCode = barcodeData.text;
-    }, (err) => {
-        console.log('Error: ', err);
-    });
-  }
-  
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EmployeePage');
+    this.empcreatedCode = this.qrData;
   }
 
 }
