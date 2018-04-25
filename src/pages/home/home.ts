@@ -12,7 +12,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, private inAppBrowser: InAppBrowser) {  }
 
   OpenCustomerPage() {
-    this.navCtrl.push(CustomerPage);
+    this.navCtrl.setRoot(CustomerPage, {}, {animate: true, duration: 250});
   }
 
   openWebpage(url: string) {

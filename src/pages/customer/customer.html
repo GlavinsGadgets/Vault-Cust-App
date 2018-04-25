@@ -16,8 +16,7 @@
       <ion-col></ion-col>
       <ion-col col-10>
         <h2>Vault Loyalty Scheme</h2>
-        <h3>Sign up </h3>
-        <h4>We believe that a space with a positive and diverse culture fuels the imagination and liberates creativity.</h4>
+        <h3>Build up points and earn your self a free coffee!</h3>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
@@ -29,14 +28,16 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col col-10 text-center>
-        <h3>Customer Details</h3>
+        <h3>Come here often?</h3>
+        <h4>Make sure to sign up in store to be able to get points.</h4>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col></ion-col>
-      <ion-col col-10>
+      <ion-col col-10 text-center>
+        <h3>Customer Details</h3>
         <ion-card *ngFor="let c of customer">
           <ion-card-content text-center class="cusdetails">
             <p>{{ c.CustomerName }}'s Current Balance</p>
@@ -46,8 +47,6 @@
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
-
-
 
     <ion-row>
       <ion-col></ion-col>

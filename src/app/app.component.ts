@@ -40,7 +40,7 @@ export class MyApp {
   }
 
   openPage(page) {
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(page.component, {}, {animate: true, duration: 200});
   }
 
   initializeApp() {
