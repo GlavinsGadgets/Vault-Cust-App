@@ -8,7 +8,8 @@ export class CustBalProvider {
   constructor(public http: HttpClient) {  }
 
   getCustomerData(): Observable<any> {
-    return this.http.get('http://www.eglavin.com/Vault-Cust/PHP/retrieve-data.php');
+    return this.http.get('http://www.eglavin.com/Projects/GMIT/Third-Year/Vault-API/retrieve-data.php');
+    
   }
 
 }
